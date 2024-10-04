@@ -1,0 +1,201 @@
+:root {
+    --Background: #cbdcde; /* Fondo general */
+    --PrimaryFont: #243746; /* Letra principal */
+    --SecondaryFont: #89b0b5; /* Segunda opción para letra */
+    --Button: #b0b0b2; /* Color de botones */
+    --ButtonHover: #f0f5f5; /* Color al poner el mouse sobre el botón */
+    --HeaderBackground: #062945; /* Fondo del encabezado */
+    --MenuLinkColor: #ffffff; /* Color de texto de los enlaces del menú */
+    --MenuLinkHoverColor: #003b34; /* Color de texto al pasar el mouse sobre los enlaces del menú */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: var(--Background);
+    color: var(--PrimaryFont);
+}
+
+header {
+    background-color: var(--HeaderBackground);
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-logo {
+    height: 75px;
+    width: auto;
+    margin-bottom: 10px;
+}
+
+nav {
+    width: 100%;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    background-color: var(--HeaderBackground);
+    width: 100%;
+}
+
+.menu li {
+    margin: 0 30px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--MenuLinkColor);
+    font-weight: 700;
+    font-size: 1.5em;
+    padding: 8px 15px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.menu a:hover {
+    background-color: var(--ButtonHover);
+    color: var(--MenuLinkHoverColor);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.header-plato {
+    height: 400px;
+    width: auto;
+    margin-right: 200px;
+}
+
+.header-text {
+    color: #243746;
+    text-align: left;
+}
+
+h1, h2 {
+    font-family: 'Bodoni Moda', serif;
+    color: var(--PrimaryFont);
+}
+
+h1 {
+    color: #243746;
+    font-size: 5em;
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #243746;
+    font-size: 2.5em;
+}
+
+.section-inicio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    padding: 20px 0;
+    min-height: 400px;
+}
+
+#fondo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('ACT.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+#fondo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(203, 220, 222, 0.2);
+    z-index: 1;
+}
+
+h1, p {
+    color: #ffffff;
+    position: relative;
+    z-index: 2;
+}
+
+h1 {
+    font-size: 3em;
+    margin: 0;
+    padding: 20px 0;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin: 20px 0;
+}
+
+footer {
+    background-color: var(--PrimaryFont);
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+}
+
+footer p {
+    font-size: 0.9em;
+}
+
+.cajas {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: var(--Background);
+}
+
+.caja {
+    flex: 1;
+    margin: 10px;
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.caja img {
+    max-width: 100%;
+    border-radius: 8px 8px 0 0;
+}
+
+.caja h2 {
+    margin-top: 10px;
+    font-size: 1.5rem;
+}
+
+.caja:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
