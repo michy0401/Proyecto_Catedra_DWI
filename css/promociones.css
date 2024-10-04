@@ -1,0 +1,23 @@
+#promocion {
+    text-align: center;
+    padding: 20px;
+}
+
+.promocion-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.promocion-container img {
+    width: 45%;
+    height: auto;
+    margin: 5px;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .promocion-container img {
+        width: 90%;
+    }
+}
