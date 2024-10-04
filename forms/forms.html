@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Reservación - Restaurante</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+    </style>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="bodoni-moda-title">Formulario de Reservación</h1>
+        <form action="/reservacion" method="POST">
+            <label for="nombre">Nombre Completo:</label>
+            <input type="text" id="nombre" name="nombre" required><br><br>
+            <label for="correo">Correo Electrónico:</label>
+            <input type="email" id="correo" name="correo" required><br><br>
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" required placeholder="Ingresa tu número de teléfono"><br><br>
+            <label>Alergias:</label><br>
+            <input type="checkbox" id="gluten" name="alergias" value="Gluten">
+            <label for="gluten">Gluten</label><br>
+            <input type="checkbox" id="lactosa" name="alergias" value="Lactosa">
+            <label for="lactosa">Lactosa</label><br>
+            <input type="checkbox" id="cacahuates" name="alergias" value="Cacahuates">
+            <label for="cacahuates">Cacahuates</label><br>
+            <input type="checkbox" id="mariscos" name="alergias" value="Mariscos">
+            <label for="mariscos">Mariscos</label><br>
+            <input type="checkbox" id="huevos" name="alergias" value="Huevos">
+            <label for="huevos">Huevos</label><br>
+            <input type="checkbox" id="otros" name="alergias" value="Otros">
+            <label for="otros">Otros:</label><br>
+            <textarea id="otras-alergias" name="otras_alergias" placeholder="Escribe otras alergias"></textarea><br><br>
+            <label for="personas">Número de personas (máximo 8):</label>
+            <input type="number" id="personas" name="personas" min="1" max="8" required><br><br>
+            <!-- Fecha y hora de reservación -->
+            <label for="fecha">Fecha y Hora de Reservación:</label>
+            <input type="datetime-local" id="fecha" name="fecha" required><br><br>
+            <button type="submit">Reservar</button>
+        </form>
+    </div>
+
+    <script>
+        const fechaInput = document.getElementById('fecha');
+        const hoy = new Date().toISOString().slice(0, 16);
+        fechaInput.min = hoy;
+    </script>
+</body>
+</html>
