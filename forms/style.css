@@ -1,0 +1,106 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    background-color: #cbdcde;
+    font-family: 'Lato', sans-serif; 
+    color: #243746;
+    margin: 0;
+    padding: 20px;
+}
+
+.bodoni-moda-title {
+    font-family: 'Bodoni Moda', serif; /* Aplicar Bodoni Moda solo al título */
+    font-weight: 700;
+    font-style: normal;
+    color: #243746;
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+label {
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 8px;
+    color: #243746;
+    font-family: 'Lato', sans-serif; 
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="datetime-local"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #89b0b5;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1em;
+    color: #243746;
+    font-family: 'Lato', sans-serif; 
+}
+
+
+input[type="checkbox"] {
+    margin-right: 10px;
+    font-family: 'Lato', sans-serif;
+}
+
+button[type="submit"] {
+    background-color: #b0b0b2;
+    color: #243746;
+    padding: 12px 20px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    font-family: 'Lato', sans-serif; 
+}
+
+/* Hover */
+button[type="submit"]:hover {
+    background-color: #f0f5f5;
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .bodoni-moda-title {
+        font-size: 1.8em; 
+    }
+
+    label {
+        font-size: 1em; 
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="number"],
+    input[type="datetime-local"],
+    textarea {
+        font-size: 0.9em; 
+    }
+
+    button[type="submit"] {
+        font-size: 0.9em; 
+        padding: 10px;
+    }
+}
