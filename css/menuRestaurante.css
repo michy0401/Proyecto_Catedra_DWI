@@ -1,0 +1,145 @@
+:root{
+    --Background: #cbdcde;/*Fondo*/
+    --PrimaryFont:#243746;/*Letra*/
+    --SecondaryFont:#89b0b5;/*Segunda opcion para letra*/
+    --Button:#b0b0b2;/*Botones*/
+    --ButtonHover:#f0f5f5;/*color al poner el mouse sobre el boton*/
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    font-family: 'Lato', sans-serif; /*Parrafos, textos de descripcion, etc*/
+    background-color: var(--Background);
+}
+
+h1 {
+    font-family: 'Bodoni Moda', sans-serif;/*Titutlos*/
+}
+
+h2 {
+    font-family: 'Bodoni Moda', sans-serif;/*Sub titulos*/
+}
+
+h3 {
+    font-family: 'Bodoni Moda', sans-serif;/*sub sub titulos*/
+}
+
+#MenuPrincipal{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0;
+    padding: 0;
+    margin: 6%;
+}
+
+.MenuGaleria{
+    position: relative;
+    text-align:center;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.MenuGaleria img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.MenuGaleria img:hover{
+    transform: scale(1.10);
+}
+
+.botonMenu{
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+}
+
+.botonMenu a{
+    display: block;
+    padding: 25px;
+    background-color: var(--Button);
+    color: var(--PrimaryFont);
+    text-decoration: none;
+    border-radius: 10px;
+    min-width: 200px;
+    text-align: center;
+}
+
+.botonMenu a:hover{
+    background-color: var(--ButtonHover);
+    color: var(--SecondaryFont);
+}
+
+#DetalleMenu{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+#DetalleMenu h1, h2{
+    text-align: center;
+    font-weight: bold;
+    color: var(--PrimaryFont);
+}
+
+#DetalleMenu h1{
+    font-size: 5rem;
+    background-color: var(--PrimaryFont);
+    color: var(--ButtonHover);
+}
+
+#DetalleMenu h2{
+    font-size: 2.5rem;
+    background-color: var(--PrimaryFont);
+    color: var(--ButtonHover);
+}
+
+.Comida{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.Comida img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+#DetalleMenu h3{
+    margin: 10px 0;
+    color: var(--PrimaryFont);
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+#DetalleMenu p{
+    line-height: 1.5;
+    margin-bottom: 15px;
+    color: var(--PrimaryFont);
+    text-align: justify;
+}
+
+footer {
+    background-color: var(--PrimaryFont);
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer img{
+    max-width: 100%;
+    height: 75px;
+    border-radius: 100%;
+}
