@@ -230,7 +230,6 @@ nav ul li a:hover {
     }
 }
 
-/* Media Query para Pantallas Muy Pequeñas */
 @media screen and (max-width: 480px) {
     .quienes-somos {
         padding: 5px; 
@@ -247,4 +246,11 @@ nav ul li a:hover {
     nav ul {
         padding: 5px; }
     }
-}
+    .contact-section {
+        padding: 20px 10px; /* Ajustar padding para pantallas muy pequeñas */
+    }
+
+    .social-icons {
+        margin-top: 5px; /* Reducir el margen superior en pantallas pequeñas */
+    }
+
