@@ -1,17 +1,31 @@
+<<<<<<< Updated upstream
 :root{
     --Background: #cbdcde;/*Fondo*/
     --PrimaryFont:#243746;/*Letra*/
     --SecondaryFont:#89b0b5;/*Segunda opcion para letra*/
     --Button:#b0b0b2;/*Botones*/
     --ButtonHover:#f0f5f5;/*color al poner el mouse sobre el boton*/
+=======
+:root {
+    --Background: #cbdcde; /* Fondo general */
+    --PrimaryFont: #243746; /* Letra principal */
+    --SecondaryFont: #89b0b5; /* Segunda opción para letra */
+    --Button: #b0b0b2; /* Color de botones */
+    --ButtonHover: #f0f5f5; /* Color al poner el mouse sobre el botón */
+    --HeaderBackground: #062945; /* Fondo del encabezado */
+    --MenuLinkColor: #ffffff; /* Color de texto de los enlaces del menú */
+    --MenuLinkHoverColor: #003b34; /* Color de texto al pasar el mouse sobre los enlaces del menú */
+    --SectionFontColor: #243746; /* Color de texto para secciones */
+>>>>>>> Stashed changes
 }
 
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+<<<<<<< Updated upstream
 
 body{
     font-family: 'Lato', sans-serif; /*Parrafos, textos de descripcion, etc*/
@@ -41,3 +55,241 @@ footer img{
     height: 75px;
     border-radius: 100%;
 }
+=======
+body {
+    font-family: 'Lato', sans-serif; /* Párrafos, textos de descripción, etc. */
+    background-color: var(--Background);
+    color: var(--PrimaryFont); /* Color de texto por defecto */
+}
+
+header {
+    background-color: var(--HeaderBackground);
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Lato', sans-serif; /* Asegura que el tipo de letra en el header sea el mismo que el del body */
+}
+
+.header-logo {
+    height: 75px;
+    width: auto;
+    margin-bottom: 10px;
+}
+
+nav {
+    width: 100%;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    background-color: var(--HeaderBackground);
+    width: 100%;
+    flex-wrap: wrap; /* Permite que los elementos del menú se envuelvan en pantallas más pequeñas */
+}
+
+.menu li {
+    margin: 0 30px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--MenuLinkColor);
+    font-weight: 700;
+    font-size: 1.5em;
+    padding: 8px 15px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.menu a:hover {
+    background-color: var(--ButtonHover);
+    color: var(--MenuLinkHoverColor);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.header-plato {
+    height: 400px;
+    width: auto;
+    margin-right: 200px;
+}
+
+.header-text {
+    color: var(--PrimaryFont); /* Color de texto para el encabezado */
+    text-align: left;
+    font-style: italic;
+}
+
+h1, h2, h3 {
+    font-family: 'Bodoni Moda', sans-serif; /* Títulos, subtítulos y sub-subtítulos */
+    color: var(--PrimaryFont); /* Color de texto por defecto para h1, h2 y h3 */
+}
+
+h1 {
+    font-size: 5em;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 2.5em;
+}
+
+h3 {
+    font-size: 2em; /* Puedes ajustar el tamaño según sea necesario */
+}
+
+.section-inicio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    padding: 20px 0;
+    min-height: 400px;
+}
+
+#fondo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('ACT.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+#fondo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(203, 220, 222, 0.5);
+    z-index: 1;
+}
+
+h1, p {
+    color: var(--SectionFontColor); /* Aplica el color definido para secciones */
+    position: relative;
+    z-index: 2;
+}
+
+h1 {
+    font-size: 3em;
+    margin: 0;
+    padding: 20px 0;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin: 20px 0;
+}
+
+footer {
+    background-color: var(--PrimaryFont);
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+}
+
+footer p {
+    font-size: 0.9em;
+}
+
+.cajas {
+    display: flex;
+    justify-content: space-between; /* Cambiado para que cubra el espacio completo */
+    padding: 0; /* Eliminar padding de la sección */
+    background-color: var(--Background);
+    height: 100%; /* Asegura que la sección se expanda */
+    flex-wrap: wrap; /* Permite que las cajas se envuelvan en pantallas más pequeñas */
+}
+
+.caja {
+    flex: 1 1 30%; /* Permite que las cajas se expandan y se reduzcan según el espacio disponible */
+    margin: 10px; /* Margen entre las cajas */
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative; /* Para posicionar el título */
+}
+
+.caja img {
+    width: 100%; /* Asegura que la imagen cubra la caja */
+    height: auto; /* Mantiene la proporción de la imagen */
+    object-fit: cover; /* Asegura que la imagen mantenga su aspecto sin deformarse */
+    border-radius: 8px; /* Mantiene el borde redondeado */
+}
+
+.caja h2 {
+    position: absolute; /* Para superponer el título sobre la imagen */
+    bottom: 10px; /* Ajusta la posición del título */
+    left: 0;
+    right: 0;
+    color: #fff; /* Color del texto del título */
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente para mejorar la legibilidad */
+    padding: 10px; /* Espaciado interno */
+    font-size: 1.5rem;
+}
+
+.caja:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 1200px) {
+    .menu a {
+        font-size: 1.2em; /* Reducir tamaño de fuente en pantallas más pequeñas */
+    }
+
+    h1 {
+        font-size: 4em; /* Reducir tamaño de fuente del título */
+    }
+
+    h2 {
+        font-size: 2em; /* Reducir tamaño de fuente del subtítulo */
+    }
+
+    .caja {
+        flex: 1 1 45%; /* Dos cajas por fila en pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3em; /* Reducir más el tamaño de fuente del título */
+    }
+
+    .caja {
+        flex: 1 1 100%; /* Una caja por fila en pantallas más pequeñas */
+    }
+
+    .menu {
+        flex-direction: column; /* Cambiar a columna en pantallas más pequeñas */
+        align-items: center; /* Centrar los elementos del menú */
+    }
+
+    .menu li {
+        margin: 10px 0; /* Espaciado entre los elementos del menú */
+    }
+}
+>>>>>>> Stashed changes
