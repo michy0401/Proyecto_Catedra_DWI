@@ -2,7 +2,7 @@
     --Background: #cbdcde;/*Fondo*/
     --PrimaryFont:#243746;/*Letra*/
     --SecondaryFont:#89b0b5;/*Segunda opcion para letra*/
-    --Button:#b0b0b2;/*Botones*/
+    --Button:#062945;/*Botones*/
     --ButtonHover:#f0f5f5;/*color al poner el mouse sobre el boton*/
 }
 
@@ -11,7 +11,6 @@
     margin: 0;
     padding: 0;
 }
-
 
 body{
     font-family: 'Lato', sans-serif; /*Parrafos, textos de descripcion, etc*/
@@ -66,8 +65,8 @@ h3 {
 .botonMenu a{
     display: block;
     padding: 25px;
-    background-color: var(--SecondaryFont);
-    color: var(--PrimaryFont);
+    background-color: var(--Button);
+    color: var(--Background);
     text-decoration: none;
     border-radius: 10px;
     min-width: 200px;
