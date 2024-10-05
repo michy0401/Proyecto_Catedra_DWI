@@ -50,7 +50,7 @@ nav ul li a:hover {
 }
 
 .quienes-somos .overlay {
-    background-color: rgba(0, 0, 0, 0.75); 
+    background-color: rgba(0, 0, 0, 0.75);
     padding: 40px;
     border-radius: 10px;
     color: white;
@@ -59,15 +59,15 @@ nav ul li a:hover {
 }
 
 .quienes-somos h2 {
-    font-size: 3rem;
+    font-size: 3rem; 
     margin-bottom: 20px;
-    color: #ffffff; 
-    font-weight: bold; 
+    color: #ffffff;
+    font-weight: bold;
 }
 
 .quienes-somos p {
     font-size: 1.5rem;
-    color: #f0f0f0; 
+    color: #f0f0f0;
 }
 
 .creadores-web {
@@ -94,7 +94,7 @@ nav ul li a:hover {
 
 .creador {
     text-align: center;
-    flex: 1 1 30%; 
+    flex: 1 1 30%;
 }
 
 .creador img {
@@ -114,16 +114,26 @@ nav ul li a:hover {
 .contact-section {
     background-color: var(--PrimaryFont);
     color: white;
-    padding: 40px 0;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
 }
 
 .contact-section .contact-content {
     display: flex;
-    justify-content: center; 
-    align-items: center; 
+    justify-content: center;
+    align-items: flex-start;
     flex-wrap: wrap;
     text-align: center;
-    gap: 20px; 
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-section .contact-content div {
+    flex: 1 1 250px;
+    max-width: 300px;
 }
 
 .contact-section h3 {
@@ -131,15 +141,26 @@ nav ul li a:hover {
     margin-bottom: 10px;
 }
 
-.contact-section .contact-content div {
-    flex: 1; 
-    max-width: 250px; 
+.contact-section p, .contact-section a {
+    font-family: 'Lato', sans-serif;
+    color: white;
+    margin: 5px 0;
+}
+
+.contact-section a {
+    color: white;
+    text-decoration: none;
+}
+
+.contact-section a:hover {
+    color: var(--ButtonHover);
+    text-decoration: underline;
 }
 
 .contact-section .social-icons a img {
-    width: 24px; 
+    width: 24px;
     height: 24px;
-    vertical-align: middle; 
+    vertical-align: middle;
 }
 
 .contact-section .newsletter {
@@ -157,7 +178,7 @@ nav ul li a:hover {
     margin-bottom: 10px;
     border: none;
     border-radius: 5px;
-    width: 200px;
+    width: 80%;
 }
 
 .contact-section .newsletter button {
@@ -167,6 +188,7 @@ nav ul li a:hover {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    width: 80%;
 }
 
 .contact-section .newsletter button:hover {
@@ -195,7 +217,7 @@ nav ul li a:hover {
 }
 
 .product-content {
-    background-color: rgba(0, 0, 0, 0.5); 
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
     border-radius: 10px;
 }
