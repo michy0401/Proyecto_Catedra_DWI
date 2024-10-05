@@ -136,6 +136,7 @@ h1, h2, h3 {
 @media (max-width: 768px) {
     #MenuPrincipal {
         grid-template-columns: 1fr;
+        margin: 2%;
     }
 
     .Comida {

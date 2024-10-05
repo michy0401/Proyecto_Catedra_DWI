@@ -283,6 +283,13 @@ footer img {
         font-size: 3em; 
     }
 
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 2%;
+    }
+
     .caja {
         flex: 1 1 100%; 
     }
@@ -322,6 +329,8 @@ footer img {
     .header-content {
         flex-direction: column; 
         align-items: center; 
+        text-align: center;
+        margin: 2%;
     }
 
     .header-plato {
@@ -336,6 +345,6 @@ footer img {
     }
 
     footer img {
-        height: 50px; /\
+        height: 50px; 
     }
 }
