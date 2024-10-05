@@ -50,7 +50,7 @@ nav ul li a:hover {
 }
 
 .quienes-somos .overlay {
-    background-color: rgba(0, 0, 0, 0.6); 
+    background-color: rgba(0, 0, 0, 0.75); 
     padding: 40px;
     border-radius: 10px;
     color: white;
@@ -59,12 +59,15 @@ nav ul li a:hover {
 }
 
 .quienes-somos h2 {
-    font-size: 3rem; 
+    font-size: 3rem;
     margin-bottom: 20px;
+    color: #ffffff; 
+    font-weight: bold; 
 }
 
 .quienes-somos p {
     font-size: 1.5rem;
+    color: #f0f0f0; 
 }
 
 .creadores-web {
@@ -116,9 +119,11 @@ nav ul li a:hover {
 
 .contact-section .contact-content {
     display: flex;
-    justify-content: space-around;
+    justify-content: center; 
+    align-items: center; 
     flex-wrap: wrap;
     text-align: center;
+    gap: 20px; 
 }
 
 .contact-section h3 {
@@ -126,10 +131,9 @@ nav ul li a:hover {
     margin-bottom: 10px;
 }
 
-.contact-section p, .contact-section a {
-    font-family: 'Lato', sans-serif;
-    color: white;
-    margin: 5px 0;
+.contact-section .contact-content div {
+    flex: 1; 
+    max-width: 250px; 
 }
 
 .contact-section .social-icons a img {
