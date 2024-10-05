@@ -21,6 +21,7 @@ html, body {
     padding: 0;
     width: 100%;
 }
+
 body{
     font-family: 'Lato', sans-serif; /*Parrafos, textos de descripcion, etc*/
     background-color: var(--Background);
