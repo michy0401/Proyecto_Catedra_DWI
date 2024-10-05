@@ -16,7 +16,12 @@
     padding: 0;
 }
 
-body {
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+body{
     font-family: 'Lato', sans-serif; /*Parrafos, textos de descripcion, etc*/
     background-color: var(--Background);
     color: var(--PrimaryFont); /* Color de texto por defecto */
@@ -211,8 +216,7 @@ p {
 }
 
 footer {
-    background-color: var(--HeaderBackground);
-    color: #ffffff;
+    background-color: var(--PrimaryFont);
     text-align: center;
     padding: 10px 0;
 }

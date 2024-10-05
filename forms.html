@@ -9,8 +9,23 @@
     </style>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
+
 <body>
+    <header>
+        <img src="img/logo.webp" alt="logo" class="header-logo">
+        <nav>
+            <ul class="menu">
+                <li><a href="#Inicio">Inicio</a></li>
+                <li><a href="GeneralMenu.html">Menú</a></li>
+                <li><a href="promociones.html">Promociones</a></li>
+                <li><a href="forms/forms.html">Reservación</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="acerca_de.html">Acerca de</a></li>
+            </ul>
+        </nav>
+    </header>
     <div class="container">
         <h1 class="bodoni-moda-title">Formulario de Reservación</h1>
         <form action="/reservacion" method="POST">
@@ -48,5 +63,9 @@
         const hoy = new Date().toISOString().slice(0, 16);
         fechaInput.min = hoy;
     </script>
+    <footer>
+        <img src="img/logo.webp" alt="logo" >
+    </footer>
 </body>
+
 </html>
