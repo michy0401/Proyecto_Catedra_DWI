@@ -70,6 +70,7 @@ nav ul li a:hover {
     color: #f0f0f0;
 }
 
+/* Estilo para creadores web */
 .creadores-web {
     background-color: var(--PrimaryFont);
     color: white;
@@ -111,6 +112,7 @@ nav ul li a:hover {
     color: white;
 }
 
+/* Sección de contacto */
 .contact-section {
     background-color: var(--PrimaryFont);
     color: white;
@@ -195,7 +197,29 @@ nav ul li a:hover {
     background-color: var(--ButtonHover);
 }
 
+/* Responsividad */
 @media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; 
+    }
+
+    .quienes-somos {
+        height: auto; 
+        padding: 10px; 
+    }
+
+    .quienes-somos h2 {
+        font-size: 2.5rem; 
+    }
+
+    .quienes-somos p {
+        font-size: 1.2rem; 
+    }
+
+    .creadores-web h2 {
+        font-size: 2rem; 
+    }
+
     .contact-section .contact-content {
         flex-direction: column;
         text-align: center;
@@ -206,44 +230,21 @@ nav ul li a:hover {
     }
 }
 
-.product-section {
-    position: relative;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-align: center;
-}
+/* Media Query para Pantallas Muy Pequeñas */
+@media screen and (max-width: 480px) {
+    .quienes-somos {
+        padding: 5px; 
+    }
 
-.product-content {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    border-radius: 10px;
-}
+    .quienes-somos h2 {
+        font-size: 2rem; 
+    }
 
-.product-content h2 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
+    .quienes-somos p {
+        font-size: 1rem; 
+    }
 
-.product-content p {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-}
-
-.product-button {
-    padding: 10px 20px;
-    background-color: transparent;
-    color: white;
-    border: 2px solid white;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 1rem;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.product-button:hover {
-    background-color: white;
-    color: #000;
+    nav ul {
+        padding: 5px; }
+    }
 }
