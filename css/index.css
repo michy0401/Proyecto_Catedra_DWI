@@ -298,9 +298,13 @@ footer img {
 
 /* Media Query para Pantallas Muy Pequeñas */
 @media screen and (max-width: 480px) {
+    header {
+        padding: 10px; /* Reducir padding en el encabezado */
+    }
+
     .menu a {
         font-size: 1em; /* Reducir tamaño de fuente en pantallas muy pequeñas */
-        padding: 10px; /* Reducir padding en enlaces */
+        padding: 8px; /* Reducir padding en enlaces */
     }
 
     h1 {
@@ -308,11 +312,11 @@ footer img {
     }
 
     h2 {
-        font-size: 1.8em; /* Reducir tamaño de fuente del subtítulo */
+        font-size: 1.5em; /* Reducir tamaño de fuente del subtítulo */
     }
 
     h3 {
-        font-size: 1.5em; /* Reducir tamaño de fuente del sub-subtítulo */
+        font-size: 1.2em; /* Reducir tamaño de fuente del sub-subtítulo */
     }
 
     .header-content {
@@ -323,6 +327,7 @@ footer img {
     .header-plato {
         margin-right: 0; /* Eliminar margen derecho */
         margin-bottom: 15px; /* Espacio en la parte inferior */
+        height: auto; /* Ajustar la altura automáticamente */
     }
 
     .caja {
