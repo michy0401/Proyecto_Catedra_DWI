@@ -191,8 +191,7 @@ p {
 }
 
 footer {
-    background-color: var(--HeaderBackground);
-    color: #ffffff;
+    background-color: var(--PrimaryFont);
     text-align: center;
     padding: 10px 0;
 }
