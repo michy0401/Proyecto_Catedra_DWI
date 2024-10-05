@@ -22,24 +22,15 @@ html, body {
     width: 100%;
 }
 
-body{
-    font-family: 'Lato', sans-serif; /*Parrafos, textos de descripcion, etc*/
+body {
+    font-family: 'Lato', sans-serif; 
     background-color: var(--Background);
-    color: var(--PrimaryFont); /* Color de texto por defecto */
+    color: var(--PrimaryFont); 
 }
 
-h1 {
-    font-family: 'Bodoni Moda', sans-serif; /* Titulos */
+h1, h2, h3 {
+    font-family: 'Bodoni Moda', sans-serif; /* Títulos */
 }
-
-h2 {
-    font-family: 'Bodoni Moda', sans-serif; /* Sub titulos */
-}
-
-h3 {
-    font-family: 'Bodoni Moda', sans-serif; /* sub sub titulos */
-}
-
 
 header {
     background-color: var(--HeaderBackground);
@@ -48,7 +39,6 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: 'Lato', sans-serif; /* Asegura que el tipo de letra en el header sea el mismo que el del body */
 }
 
 .header-logo {
@@ -69,32 +59,32 @@ footer img {
     border-radius: 100%;
 }
 
-/* Estilo para el contenedor del menú */
+/* contenedor del menú */
 nav ul {
     display: flex;
-    justify-content: center; /* Centra el menú horizontalmente */
-    flex-wrap: nowrap; /* Evita que los elementos se dividan en múltiples filas */
+    justify-content: center; 
+    flex-wrap: nowrap; 
     padding: 0;
     margin: 0;
     list-style: none;
 }
 
-/* Estilo para los elementos del menú */
+/*  elementos del menú */
 nav ul li {
     display: inline-block;
-    margin: 0 20px; /* Espacio entre los elementos del menú */
+    margin: 0 20px; 
 }
 
-/* Estilo para los enlaces del menú */
+/*  enlaces del menú */
 nav ul li a {
-    color: var(--MenuLinkColor); /* Color de texto para los enlaces */
+    color: var(--MenuLinkColor); 
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.2rem; /* Tamaño de la fuente */
+    font-size: 1.2rem;
 }
 
 nav ul li a:hover {
-    color: var(--MenuLinkHoverColor); /* Color cuando se pasa el cursor por encima */
+    color: var(--MenuLinkHoverColor); 
 }
 
 /* Menú general */
@@ -103,9 +93,9 @@ nav ul li a:hover {
     display: flex;
     justify-content: center;
     padding: 10px 0;
-    background-color: var(--HeaderBackground); /* Color de fondo del encabezado */
+    background-color: var(--HeaderBackground); 
     width: 100%;
-    flex-wrap: wrap; /* Permite que los elementos del menú se envuelvan en pantallas más pequeñas */
+    flex-wrap: wrap; 
 }
 
 .menu li {
@@ -114,7 +104,7 @@ nav ul li a:hover {
 
 .menu a {
     text-decoration: none;
-    color: var(--MenuLinkColor); /* Color de los enlaces */
+    color: var(--MenuLinkColor); 
     font-weight: 700;
     font-size: 1.5em;
     padding: 8px 15px;
@@ -122,8 +112,8 @@ nav ul li a:hover {
 }
 
 .menu a:hover {
-    background-color: var(--ButtonHover); /* Fondo al pasar el cursor */
-    color: var(--MenuLinkHoverColor); /* Color de texto al pasar el cursor */
+    background-color: var(--ButtonHover); 
+    color: var(--MenuLinkHoverColor); 
 }
 
 .header-content {
@@ -141,14 +131,13 @@ nav ul li a:hover {
 }
 
 .header-text {
-    color: var(--PrimaryFont); /* Color de texto para el encabezado */
+    color: var(--PrimaryFont); 
     text-align: left;
     font-style: italic;
 }
 
 h1, h2, h3 {
-    font-family: 'Bodoni Moda', sans-serif; /* Títulos, subtítulos y sub-subtítulos */
-    color: var(--PrimaryFont); /* Color de texto por defecto para h1, h2 y h3 */
+    color: var(--PrimaryFont);
 }
 
 h1 {
@@ -161,7 +150,7 @@ h2 {
 }
 
 h3 {
-    font-size: 2em; /* Puedes ajustar el tamaño según sea necesario */
+    font-size: 2em;
 }
 
 .section-inicio {
@@ -200,7 +189,6 @@ h3 {
 }
 
 h1, p {
-    color: var(--SectionFontColor); /* Aplica el color definido para secciones */
     position: relative;
     z-index: 2;
 }
@@ -231,38 +219,38 @@ footer img {
 
 .cajas {
     display: flex;
-    justify-content: space-between; /* Cambiado para que cubra el espacio completo */
-    padding: 0; /* Eliminar padding de la sección */
+    justify-content: space-between; 
+    padding: 0; 
     background-color: var(--Background);
-    height: 100%; /* Asegura que la sección se expanda */
-    flex-wrap: wrap; /* Permite que las cajas se envuelvan en pantallas más pequeñas */
+    height: 100%; 
+    flex-wrap: wrap; 
 }
 
 .caja {
-    flex: 1 1 30%; /* Permite que las cajas se expandan y se reduzcan según el espacio disponible */
-    margin: 10px; /* Margen entre las cajas */
+    flex: 1 1 30%; 
+    margin: 10px;
     text-align: center;
     border: 1px solid #ccc;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    position: relative; /* Para posicionar el título */
+    position: relative; 
 }
 
 .caja img {
-    width: 100%; /* Asegura que la imagen cubra la caja */
-    height: auto; /* Mantiene la proporción de la imagen */
-    object-fit: cover; /* Asegura que la imagen mantenga su aspecto sin deformarse */
-    border-radius: 8px; /* Mantiene el borde redondeado */
+    width: 100%; 
+    height: auto; 
+    object-fit: cover; 
+    border-radius: 8px;
 }
 
 .caja h2 {
-    position: absolute; /* Para superponer el título sobre la imagen */
-    bottom: 10px; /* Ajusta la posición del título */
+    position: absolute; 
+    bottom: 10px; 
     left: 0;
     right: 0;
-    color: #fff; /* Color del texto del título */
-    background-color: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente para mejorar la legibilidad */
-    padding: 10px; /* Espaciado interno */
+    color: #fff; 
+    background-color: rgba(0, 0, 0, 0.6); 
+    padding: 10px;
     font-size: 1.5rem;
 }
 
@@ -271,39 +259,83 @@ footer img {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Media Queries para Responsividad */
+/*Responsividad */
 @media (max-width: 1200px) {
     .menu a {
-        font-size: 1.2em; /* Reducir tamaño de fuente en pantallas más pequeñas */
+        font-size: 1.2em; 
     }
 
     h1 {
-        font-size: 4em; /* Reducir tamaño de fuente del título */
+        font-size: 4em; 
     }
 
     h2 {
-        font-size: 2em; /* Reducir tamaño de fuente del subtítulo */
+        font-size: 2em; 
     }
 
     .caja {
-        flex: 1 1 45%; /* Dos cajas por fila en pantallas más pequeñas */
+        flex: 1 1 45%; 
     }
 }
 
 @media (max-width: 768px) {
     h1 {
-        font-size: 3em; /* Reducir más el tamaño de fuente del título */
+        font-size: 3em; 
     }
 
     .caja {
-        flex: 1 1 100%; /* Una caja por fila en pantallas más pequeñas */
+        flex: 1 1 100%; 
     }
 
     .menu {
-        flex-direction: column; /* Menú en columna para pantallas pequeñas */
+        flex-direction: column; 
     }
 
     .menu li {
-        margin: 10px 0; /* Espaciado entre elementos del menú */
+        margin: 10px 0; 
+    }
+}
+
+/* Media Query para Pantallas Muy Pequeñas */
+@media screen and (max-width: 480px) {
+    header {
+        padding: 10px; 
+    }
+
+    .menu a {
+        font-size: 1em; 
+        padding: 8px; 
+    }
+
+    h1 {
+        font-size: 2.5em; 
+    }
+
+    h2 {
+        font-size: 1.5em; 
+    }
+
+    h3 {
+        font-size: 1.2em; 
+    }
+
+    .header-content {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .header-plato {
+        margin-right: 0; 
+        margin-bottom: 15px; 
+        height: auto; 
+    }
+
+    .caja {
+        flex: 1 1 100%; 
+        margin: 5px 0; 
+    }
+
+    footer img {
+        height: 50px; /\
     }
 }
