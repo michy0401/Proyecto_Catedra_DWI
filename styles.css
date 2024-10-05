@@ -1,0 +1,223 @@
+:root {
+    --Background: #cbdcde; /* Fondo */
+    --PrimaryFont: #243746; /* Letra */
+    --SecondaryFont: #89b0b5; /* Segunda opción para letra */
+    --Button: #b0b0b2; /* Botones */
+    --ButtonHover: #f0f5f5; /* Color al pasar el mouse sobre el botón */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif; 
+    background-color: var(--Background);
+}
+
+h1, h2, h3 {
+    font-family: 'Bodoni Moda', sans-serif;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--Button);
+    padding: 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Bodoni Moda', sans-serif;
+}
+
+nav ul li a:hover {
+    color: var(--ButtonHover);
+}
+
+.quienes-somos {
+    position: relative;
+    height: 500px; 
+    background: url('https://andianbistro.com/wp-content/uploads/2020/08/EVENTOS.png') center/cover no-repeat; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.quienes-somos .overlay {
+    background-color: rgba(0, 0, 0, 0.6); 
+    padding: 40px;
+    border-radius: 10px;
+    color: white;
+    max-width: 800px;
+    text-align: center;
+}
+
+.quienes-somos h2 {
+    font-size: 3rem; 
+    margin-bottom: 20px;
+}
+
+.quienes-somos p {
+    font-size: 1.5rem;
+}
+
+.creadores-web {
+    background-color: var(--PrimaryFont);
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.creadores-web h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.creadores-web .creadores-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px; 
+}
+
+.creador {
+    text-align: center;
+    flex: 1 1 30%; 
+}
+
+.creador img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%; 
+    margin-bottom: 10px;
+}
+
+.creador p {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.contact-section {
+    background-color: var(--PrimaryFont);
+    color: white;
+    padding: 40px 0;
+}
+
+.contact-section .contact-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.contact-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.contact-section p, .contact-section a {
+    font-family: 'Lato', sans-serif;
+    color: white;
+    margin: 5px 0;
+}
+
+.contact-section .social-icons a img {
+    width: 24px; 
+    height: 24px;
+    vertical-align: middle; 
+}
+
+.contact-section .newsletter {
+    text-align: center;
+}
+
+.contact-section .newsletter form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-section .newsletter input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 200px;
+}
+
+.contact-section .newsletter button {
+    padding: 10px 20px;
+    background-color: var(--Button);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-section .newsletter button:hover {
+    background-color: var(--ButtonHover);
+}
+
+@media (max-width: 768px) {
+    .contact-section .contact-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-section .contact-content div {
+        margin-bottom: 20px;
+    }
+}
+
+.product-section {
+    position: relative;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.product-content {
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.product-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.product-content p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.product-button {
+    padding: 10px 20px;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.product-button:hover {
+    background-color: white;
+    color: #000;
+}
