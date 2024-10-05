@@ -66,7 +66,7 @@ h3 {
 .botonMenu a{
     display: block;
     padding: 25px;
-    background-color: var(--Button);
+    background-color: var(--SecondaryFont);
     color: var(--PrimaryFont);
     text-decoration: none;
     border-radius: 10px;
