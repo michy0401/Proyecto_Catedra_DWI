@@ -183,7 +183,6 @@ nav ul li a:hover {
 .product-section {
     position: relative;
     height: 400px;
-    background: url('') center/cover no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
