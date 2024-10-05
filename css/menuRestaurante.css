@@ -122,7 +122,7 @@ h1, h2, h3 {
     text-align: justify;
 }
 
-/* Responsividad */
+/* Media Queries para Responsividad */
 @media (max-width: 1200px) {
     #MenuPrincipal {
         grid-template-columns: repeat(2, 1fr);
@@ -157,5 +157,40 @@ h1, h2, h3 {
     .botonMenu a {
         padding: 15px;
         min-width: 150px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #MenuPrincipal {
+        margin: 3%; 
+    }
+
+    .MenuGaleria img {
+        height: 200px; 
+    }
+
+    #DetalleMenu h1 {
+        font-size: 2.5rem;
+    }
+
+    #DetalleMenu h2 {
+        font-size: 1.8rem; 
+    }
+
+    #DetalleMenu h3 {
+        font-size: 1.2rem; 
+    }
+
+    .botonMenu a {
+        padding: 10px; 
+        min-width: 120px; 
+    }
+
+    #DetalleMenu p {
+        font-size: 0.9rem; 
+    }
+
+    .Comida {
+        gap: 10px; 
     }
 }
