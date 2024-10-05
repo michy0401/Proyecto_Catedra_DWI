@@ -22,24 +22,15 @@ html, body {
     width: 100%;
 }
 
-body{
-    font-family: 'Lato', sans-serif; /*Parrafos, textos de descripcion, etc*/
+body {
+    font-family: 'Lato', sans-serif; /* Párrafos, textos de descripción, etc. */
     background-color: var(--Background);
     color: var(--PrimaryFont); /* Color de texto por defecto */
 }
 
-h1 {
-    font-family: 'Bodoni Moda', sans-serif; /* Titulos */
+h1, h2, h3 {
+    font-family: 'Bodoni Moda', sans-serif; /* Títulos */
 }
-
-h2 {
-    font-family: 'Bodoni Moda', sans-serif; /* Sub titulos */
-}
-
-h3 {
-    font-family: 'Bodoni Moda', sans-serif; /* sub sub titulos */
-}
-
 
 header {
     background-color: var(--HeaderBackground);
@@ -48,7 +39,6 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: 'Lato', sans-serif; /* Asegura que el tipo de letra en el header sea el mismo que el del body */
 }
 
 .header-logo {
@@ -147,7 +137,6 @@ nav ul li a:hover {
 }
 
 h1, h2, h3 {
-    font-family: 'Bodoni Moda', sans-serif; /* Títulos, subtítulos y sub-subtítulos */
     color: var(--PrimaryFont); /* Color de texto por defecto para h1, h2 y h3 */
 }
 
@@ -200,7 +189,6 @@ h3 {
 }
 
 h1, p {
-    color: var(--SectionFontColor); /* Aplica el color definido para secciones */
     position: relative;
     z-index: 2;
 }
@@ -305,5 +293,44 @@ footer img {
 
     .menu li {
         margin: 10px 0; /* Espaciado entre elementos del menú */
+    }
+}
+
+/* Media Query para Pantallas Muy Pequeñas */
+@media screen and (max-width: 480px) {
+    .menu a {
+        font-size: 1em; /* Reducir tamaño de fuente en pantallas muy pequeñas */
+        padding: 10px; /* Reducir padding en enlaces */
+    }
+
+    h1 {
+        font-size: 2.5em; /* Reducir tamaño de fuente del título */
+    }
+
+    h2 {
+        font-size: 1.8em; /* Reducir tamaño de fuente del subtítulo */
+    }
+
+    h3 {
+        font-size: 1.5em; /* Reducir tamaño de fuente del sub-subtítulo */
+    }
+
+    .header-content {
+        flex-direction: column; /* Cambiar a columna para que el contenido del encabezado se adapte mejor */
+        align-items: center; /* Centrar el contenido */
+    }
+
+    .header-plato {
+        margin-right: 0; /* Eliminar margen derecho */
+        margin-bottom: 15px; /* Espacio en la parte inferior */
+    }
+
+    .caja {
+        flex: 1 1 100%; /* Una caja por fila */
+        margin: 5px 0; /* Reducir margen entre cajas */
+    }
+
+    footer img {
+        height: 50px; /* Reducir el tamaño de las imágenes en el pie de página */
     }
 }
