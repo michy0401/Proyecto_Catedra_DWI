@@ -4,7 +4,10 @@ if(localStorage.getItem("userRole") && localStorage.getItem("userRole") === 'emp
     const navItem = document.getElementById('nav-item-employee');
     navItem.style.display = 'none'
     const dashboardEmployee = document.getElementById('dashboard-employee');
-    dashboardEmployee.style.display = 'none'
+    if(dashboardEmployee){
+
+        dashboardEmployee.style.display = 'none'
+    }
 }
 
 const logoutBtn = document.querySelector('#logout-btn');

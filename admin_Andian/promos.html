@@ -572,6 +572,19 @@
   });
 </script>
 
+<script>
+  const role = localStorage.getItem("userRole");
+  const username = localStorage.getItem("username");
+
+  if (!role || !username) {
+      // Si no hay rol o nombre de usuario, redirige al login
+      window.location.href = "login.html";
+  } else {
+      // Muestra el rol y el nombre de usuario en la interfaz
+      document.getElementById("user-role-display").textContent = `${username} - ${role === 'admin' ? 'Administrador' : 'Empleado'}`;
+  }
+</script>
+
 <script type="module" src="script/scriptPromo.js" defer></script>
 <script type="module" src="script/scriptEmpleado.js" defer></script>  
 </body>
