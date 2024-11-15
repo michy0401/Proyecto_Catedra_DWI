@@ -20,8 +20,6 @@
   <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
   <!-- iCheck -->
   <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
-  <!-- JQVMap -->
-  <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="dist/css/adminlte.min.css">
   <!-- overlayScrollbars -->
@@ -30,6 +28,9 @@
   <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
   <!-- summernote -->
   <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
+  <!-- SweetAlert2 -->
+  <link rel="stylesheet" href="plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
+
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -167,7 +168,6 @@
             <table id="example1" class="table table-bordered table-striped">
               <thead>
                 <tr>
-                  <th style="width: 10px">#</th>
                   <th>Nombre</th>
                   <th>Descripcion</th>
                   <th>Estado</th>
@@ -178,89 +178,9 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>Trident</td>
-                  <td>Internet Explorer 4.0</td>
-                  <td>Win 95+</td>
-                  <td> 4</td>
-                  <td>X</td>
-                  <td>X</td>
-                  <td>X</td>
-                  <td>
-                    <div class="btn-group">
-                      <button class="btn btn-warning btnEditPromocion" idPromocion="" data-toggle="modal" data-target="#modalEditPromocion"><i class="fas fa-solid fa-pen"></i></button>
-                      <button class="btn btn-danger btnDeletePromocion" idPromocion="" ><i class="fa fa-solid fa-trash"></i></button>
-                    </div>
-                  </td>
-                  
-                </tr>
-                <tr>
-                  <td>Trident</td>
-                  <td>Internet Explorer 4.0</td>
-                  <td>Win 95+</td>
-                  <td> 4</td>
-                  <td>X</td>
-                  <td>X</td>
-                  <td>X</td>
-                  <td>
-                    <div class="btn-group">
-                      <button class="btn btn-warning btnEditPromocion" idPromocion="" data-toggle="modal" data-target="#modalEditPromocion"><i class="fas fa-solid fa-pen"></i></button>
-                      <button class="btn btn-danger btnDeletePromocion" idPromocion="" ><i class="fa fa-solid fa-trash"></i></button>
-                    </div>
-                  </td>
-                  
-                </tr>
-                <tr>
-                  <td>Trident</td>
-                  <td>Internet Explorer 4.0</td>
-                  <td>Win 95+</td>
-                  <td> 4</td>
-                  <td>X</td>
-                  <td>X</td>
-                  <td>X</td>
-                  <td>
-                    <div class="btn-group">
-                      <button class="btn btn-warning btnEditPromocion" idPromocion="" data-toggle="modal" data-target="#modalEditPromocion"><i class="fas fa-solid fa-pen"></i></button>
-                      <button class="btn btn-danger btnDeletePromocion" idPromocion="" ><i class="fa fa-solid fa-trash"></i></button>
-                    </div>
-                  </td>
-                  
-                </tr>
-                <tr>
-                  <td>Trident</td>
-                  <td>Internet Explorer 4.0</td>
-                  <td>Win 95+</td>
-                  <td> 4</td>
-                  <td>X</td>
-                  <td>X</td>
-                  <td>X</td>
-                  <td>
-                    <div class="btn-group">
-                      <button class="btn btn-warning btnEditPromocion" idPromocion="" data-toggle="modal" data-target="#modalEditPromocion"><i class="fas fa-solid fa-pen"></i></button>
-                      <button class="btn btn-danger btnDeletePromocion" idPromocion="" ><i class="fa fa-solid fa-trash"></i></button>
-                    </div>
-                  </td>
-                  
-                </tr>
-                <tr>
-                  <td>Trident</td>
-                  <td>Internet Explorer 4.0</td>
-                  <td>Win 95+</td>
-                  <td> 4</td>
-                  <td>X</td>
-                  <td>X</td>
-                  <td>X</td>
-                  <td>
-                    <div class="btn-group">
-                      <button class="btn btn-warning btnEditPromocion" idPromocion="" data-toggle="modal" data-target="#modalEditPromocion"><i class="fas fa-solid fa-pen"></i></button>
-                      <button class="btn btn-danger btnDeletePromocion" idPromocion="" ><i class="fa fa-solid fa-trash"></i></button>
-                    </div>
-                  </td>
-                  
-                </tr>
               
               </tbody>
-              
+
             </table>
           </div>
           <!-- /.card-body -->
@@ -293,37 +213,36 @@
 <!-- ./wrapper -->
 
 
-<!-- modal agregar platillo -->
+<!-- modal agregar promo -->
 
 <div class="modal fade" id="modalAddPromocion">
 
   <div class="modal-dialog">
 
-      <div class="modal-content">
-
-          <form method="post" enctype="multipart/form-data">
+      <div class="modal-content" id="form">
 
               <div class="modal-header" style="background: #17a2b8; color:white;">
                   <h4 class="modal-title">Agregar Promocion</h4>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="close-btn">
                       <span aria-hidden="true">&times;</span>
                   </button>
               </div>
 
               <div class="modal-body">
-
+                <form id="formularioPromocion" enctype="multipart/form-data">
+                  
                   <div class="card-body">
 
-                      <form method="post">
-                          <!-- nombre del platillo --> 
+                          <!-- nombre de la promocion --> 
                           <div class="input-group mb-3">
                               <div class="input-group-append">
                                   <div class="input-group-text">
-                                      <span class="fas fa-solid fa-tag"></span>
+                                      <span class="fas fa-solid fa-utensils"></span>
                                   </div>
                               </div>
-                              <input type="text" class="form-control" placeholder="Promocion" name="newPromocion" required>
+                              <input type="text" class="form-control" placeholder="Promocion" id="newPromocion" name="newPromocion" required>
                           </div>
+                          <span id="name-error-msg" class="text-danger"></span> <!-- Mensaje de error para el nombre -->
 
                           <!-- descripcion --> 
                           <div class="input-group mb-3">
@@ -334,6 +253,7 @@
                               </div>
                               <input type="text" class="form-control" placeholder="Descripcion" name="newDescripcion" id="newDescripcion" required>
                           </div>
+                          <span id="disc-error-msg" class="text-danger"></span> <!-- Mensaje de error para la descripción -->
 
                           <!-- estado --> 
                           <div class="input-group mb-3">
@@ -342,13 +262,13 @@
                                   <span class="fas fa-solid fa-list"></span>
                                 </div>
                             </div>
-                            <select type="text" class="form-control" name="newEstado" required>
+                            <select type="text" class="form-control" name="newEstado" id="newEstado" required>
                                 <option value="">Seleccionar Estado</option>
                                 <option value="Disponible">Disponible</option>
                                 <option value="No Disponible">No Disponible</option>
-
                             </select>
                           </div>
+                          <span id="estado-error-msg" class="text-danger"></span> <!-- Mensaje de error para el estado -->
 
                           <!-- fecha de inicio --> 
                           <div class="input-group mb-3">
@@ -378,16 +298,16 @@
                               <p class="text-muted">Peso max de la foto 2MB</p>
                               <img src="dist/img/noImagen.png" class="img-thumbnail preview" width="100px" style="margin-top:50px;">
                           </div>
+                          <span id="image-error-msg" class="text-danger"></span> <!-- Mensaje de error para la foto -->
 
 
                   </div>
                   <!-- /.card-body -->
-
               </div>
 
               <div class="modal-footer justify-content-between">
                   <button type="button" class="btn btn-outline-light" data-dismiss="modal">Close</button>
-                  <button type="submit" class="btn btn-info">Guardar Promocion</button>
+                  <button type="submit" class="btn btn-info" id="submitdata">Guardar Promocion</button>
               </div>
           </form>
       </div>
@@ -404,9 +324,8 @@
 
   <div class="modal-dialog">
 
-      <div class="modal-content">
+      <div class="modal-content" id="form">
 
-          <form method="post" enctype="multipart/form-data">
 
               <div class="modal-header" style="background: #17a2b8; color:white;">
                   <h4 class="modal-title">Editar Promocion</h4>
@@ -416,15 +335,20 @@
               </div>
 
               <div class="modal-body">
+                <form enctype="multipart/form-data">
 
                   <div class="card-body">
 
-                      <form method="post">
+                          <div class="form-group">
+                            <div id="image-div"></div>
+                            <input type="hidden" class="form-control" id="id-edit" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" disabled>
+                          </div>
+
                           <!-- nombre del promocion --> 
                           <div class="input-group mb-3">
                               <div class="input-group-append">
                                   <div class="input-group-text">
-                                    <span class="fas fa-solid fa-tag"></span>
+                                    <span class="fas fa-solid fa-utensils"></span>
                                   </div>
                               </div>
                               <input type="text" class="form-control" value="" id="editPromocion" name="editPromocion" >
@@ -475,28 +399,30 @@
                           </div>
 
 
-                          <!-- photo --> 
+                          <!-- photo 
                           <div class="input-group mb-3">
                               <div class="panel">UPLOAD PHOTO</div>
                               <input type="file" class="newPhoto" name="editPhoto">                               
                               <p class="text-muted">Peso max de la foto 2MB</p>                                
                               <img src="dist/img/noImagen.png" class="img-thumbnail preview" width="100px" style="margin-top:50px;">
                               <input type="hidden" name="currentPhoto" id="currentPhoto">
-                          </div>
+                          </div>-->
                       
 
                   </div>
-                  <!-- /.card-body -->    
+                  <!-- /.card-body -->  
+                </form>  
               
               </div>
 
               <div class="modal-footer justify-content-between">
                   <button type="button" class="btn btn-outline-light" data-dismiss="modal">Close</button>
-                  <button type="submit" class="btn btn-info">Guardar Cambios</button>
+                  <button type="submit" class="btn btn-info" id="update" data-dismiss="modal">Guardar Cambios</button>
+
               </div>
 
             
-          </form>
+          
       </div>
       <!-- /.modal-content -->
   </div>
@@ -534,9 +460,6 @@
 <script src="plugins/chart.js/Chart.min.js"></script>
 <!-- Sparkline -->
 <script src="plugins/sparklines/sparkline.js"></script>
-<!-- JQVMap -->
-<script src="plugins/jqvmap/jquery.vmap.min.js"></script>
-<script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
 <!-- jQuery Knob Chart -->
 <script src="plugins/jquery-knob/jquery.knob.min.js"></script>
 <!-- daterangepicker -->
@@ -550,6 +473,9 @@
 <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
 <!-- AdminLTE App -->
 <script src="dist/js/adminlte.js"></script>
+<!-- SweetAlert2 -->
+<script src="plugins/sweetalert2/sweetalert2.min.js"></script>
+
 <!-- AdminLTE for demo purposes 
 <script src="dist/js/demo.js"></script>-->
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
@@ -561,11 +487,11 @@
       "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
     }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
     $('#example2').DataTable({
-      "paging": true,
+      "paging": false,
       "lengthChange": false,
       "searching": false,
-      "ordering": true,
-      "info": true,
+      "ordering": false,
+      "info": false,
       "autoWidth": false,
       "responsive": true,
     });
