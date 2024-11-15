@@ -29,7 +29,7 @@ function validateData() {
         document.getElementById("disc-error-msg").innerHTML = "Debe ingresar una descripción";
         console.log("Validation result: false - Descripción vacía");
         return false;
-    } else if (descripcion.length > 100) {
+    } else if (descripcion.length > 1000) {
         document.getElementById("disc-error-msg").innerHTML = "La descripción debe tener un máximo de 100 caracteres";
         console.log("Validation result: false - Descripción demasiado larga");
         return false;
