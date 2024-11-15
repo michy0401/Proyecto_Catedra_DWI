@@ -1,23 +1,4 @@
 // import { saveEmpleado, getEmpleados, getEmpleado, getEmpleadoListSize, deleteEmpleado, updateEmpleado } from "./firebase.js";
-<script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
-
-  // Your web app's Firebase configuration
-  const firebaseConfig = {
-    apiKey: "AIzaSyDIlNIZN2sYQaw2xjsmw6XPylcXBpEbucw",
-    authDomain: "desarrolloweb-17794.firebaseapp.com",
-    projectId: "desarrolloweb-17794",
-    storageBucket: "desarrolloweb-17794.firebasestorage.app",
-    messagingSenderId: "932866256374",
-    appId: "1:932866256374:web:b130f756bef8c596256bd7"
-  };
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-</script>
 
 const formLogin = document.querySelector('#loginForm');
 formLogin.addEventListener('submit', (event) => {
@@ -36,28 +17,14 @@ formLogin.addEventListener('submit', (event) => {
     if (users[username] && users[username].password === password) {
         const role = users[username].role;
 
-        // Guardar datos en Firebase
-        const dbRef = ref(database, 'users/' + username);
-        set(dbRef, {
-            username: username,
-            role: role,
-            lastLogin: new Date().toISOString()
-        })
-        .then(() => {
-            console.log('Datos guardados en Firebase.');
+        // Guarda el rol y el nombre de usuario en localStorage
+        localStorage.setItem("userRole", role);
+        localStorage.setItem("username", username);
 
-            // Guardar datos en localStorage
-            localStorage.setItem("userRole", role);
-            localStorage.setItem("username", username);
-
-            // Redirigir al inicio
-            window.location.href = "index.html";
-        })
-        .catch((error) => {
-            console.error("Error al guardar en Firebase:", error);
-        });
+        // Redirige a la página de inicio (index.html)
+        window.location.href = "index.html";
     } else {
         message.textContent = 'Usuario o contraseña incorrectos.';
         message.style.color = 'red';
     }
-});
+})
