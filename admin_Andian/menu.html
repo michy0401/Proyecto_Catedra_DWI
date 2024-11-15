@@ -244,17 +244,17 @@
                           </div>
                           <span id="name-error-msg" class="text-danger"></span> <!-- Mensaje de error para el nombre -->
 
-                          <!-- descripcion --> 
                           <div class="input-group mb-3">
-                              <div class="input-group-append">
-                                  <div class="input-group-text">
-                                      <span class="fas fa-solid fa-audio-description"></span>
-                                  </div>
-                              </div>
-                              <input type="text" class="form-control" placeholder="Descripcion" name="newDescripcion" id="newDescripcion" required>
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+                                    <span class="fas fa-solid fa-audio-description"></span>
+                                </div>
+                            </div>
+                            <!-- Reemplazar el input por un textarea -->
+                            <textarea class="form-control" placeholder="Escribe la descripción aquí..." name="newDescripcion" id="newDescripcion" rows="2" required></textarea>
                           </div>
                           <span id="disc-error-msg" class="text-danger"></span> <!-- Mensaje de error para la descripción -->
-
+                          
                           <!-- precio --> 
                           <div class="input-group mb-3">
                             <div class="input-group-append">
@@ -364,15 +364,17 @@
                               <input type="text" class="form-control" value="" id="editPlatillo" name="editPlatillo" >
                           </div>
 
-                          <!-- descripcion --> 
+                          <!-- Descripción -->
                           <div class="input-group mb-3">
-                              <div class="input-group-append">
-                                  <div class="input-group-text">
+                            <div class="input-group-append">
+                                <div class="input-group-text">
                                     <span class="fas fa-solid fa-audio-description"></span>
-                                  </div>
-                              </div>
-                              <input type="text" class="form-control" value="" id="editDescripcion" name="editDescripcion" >
+                                </div>
+                            </div>
+                            <!-- Cambiado de input a textarea -->
+                            <textarea class="form-control" id="editDescripcion" name="editDescripcion" rows="2" placeholder="Escribe la descripción aquí..."></textarea>
                           </div>
+
 
                           <!-- precio --> 
                           <div class="input-group mb-3">
