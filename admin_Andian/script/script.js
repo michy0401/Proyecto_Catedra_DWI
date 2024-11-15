@@ -185,6 +185,11 @@ async function showData() {
 
     document.querySelectorAll('.btnDeletePlatillo').forEach(btn => {
         btn.addEventListener('click', (event) => {
+            const idPlatillo = event.currentTarget.getAttribute('idPlatillo');
+        
+            // Hacer console.log del idPlatillo
+            console.log("ID del platillo:", idPlatillo);
+
             Swal.fire({
                 title: "Confirmación",
                 text: "¿Quieres eliminar este platillo?",
@@ -195,7 +200,8 @@ async function showData() {
             }).then((result) => {
                 if (result.isConfirmed) {
                     // Llamada a la función de eliminación del platillo
-                    deletePlatillo(event.target.getAttribute('idPlatillo'));
+                    deletePlatillo(idPlatillo);
+                    
                     // Mostrar mensaje de éxito
                     Swal.fire(
                         'Eliminado',
