@@ -135,10 +135,15 @@ nav ul li a:hover {
     margin-right: 200px;
 }
 
-.header-text {
-    color: var(--PrimaryFont);
-    text-align: left;
-    font-style: italic;
+.header-text { 
+    color: white; /* Asegura que el texto sea blanco */
+    text-align: center; /* Alinea el texto al centro */
+    font-style: italic; /* Aplica estilo en cursiva */
+    background-color: rgba(22, 21, 21, 0.75); /* Fondo semitransparente */
+    padding: 40px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    max-width: 800px; /* Ancho máximo del contenedor */
+    font-size: 2.5rem; /* Ajusta el tamaño del texto (grande) */
 }
 
 /* Estilos de los títulos */
