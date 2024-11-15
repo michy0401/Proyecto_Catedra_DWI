@@ -74,13 +74,14 @@
     <div class="sidebar">
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-            <div class="image">
-            <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
-            </div>
-            <div class="info">
-            <a href="#" class="d-block">Empleado o Admin</a>
-            </div>
-        </div>
+          <div class="image">
+              <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+          </div>
+          <div class="info">
+              <a href="#" class="d-block" id="user-role-display">Empleado o Admin</a>
+          </div>
+      </div>
+      
 
         <!-- Sidebar Menu -->
         <nav class="mt-2">
@@ -111,7 +112,7 @@
                     </p>
                     </a>
                 </li>
-                <li class="nav-item">
+                <li id="nav-item-employee" class="nav-item">
                     <a href="empleado.html" class="nav-link">
                     <i class="nav-icon fas fa-solid fa-users"></i>
                     <p>
@@ -121,6 +122,10 @@
                 </li>
             </ul>
         </nav>
+
+        <div>
+          <button id="logout-btn">Cerrar sesion</button>
+        </div>
       <!-- /.sidebar-menu -->
     </div>
     <!-- /.sidebar -->
@@ -182,7 +187,7 @@
             </div>
           </div>
           <!-- ./col -->
-          <div class="col-lg-3 col-6">
+          <div class="col-lg-3 col-6" id="dashboard-employee">
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
@@ -251,6 +256,19 @@
 <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
 <!-- AdminLTE App -->
 <script src="dist/js/adminlte.js"></script>
+<!-- Script para mostrar el nombre de usuario y rol -->
+<script>
+  const role = localStorage.getItem("userRole");
+  const username = localStorage.getItem("username");
+
+  if (!role || !username) {
+      // Si no hay rol o nombre de usuario, redirige al login
+      window.location.href = "login.html";
+  } else {
+      // Muestra el rol y el nombre de usuario en la interfaz
+      document.getElementById("user-role-display").textContent = `${username} - ${role === 'admin' ? 'Administrador' : 'Empleado'}`;
+  }
+</script>
 <!-- AdminLTE for demo purposes 
 <script src="dist/js/demo.js"></script>-->
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
