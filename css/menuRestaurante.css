@@ -21,6 +21,55 @@ h1, h2, h3 {
     font-family: 'Bodoni Moda', sans-serif; /* Títulos */
 }
 
+/* Nueva clase para la tarjeta de platillo */
+/* Contenedor para las tarjetas */
+.dish-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.dish-card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  background-color: #fff;
+}
+
+.dish-card img {
+  max-width: 100%;
+  border-radius: 10px;
+  height: auto;
+}
+
+.dish-card h2 {
+  font-family: 'Bodoni Moda', serif;
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.dish-card .dish-description {
+  font-family: 'Lato', sans-serif;
+  font-size: 1rem;
+  color: #666;
+}
+
+.dish-card .dish-price {
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: #333;
+}
+
+.dish-card:hover {
+  transform: scale(1.05);
+}
+
 #MenuPrincipal {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -70,11 +119,6 @@ h1, h2, h3 {
     color: var(--SecondaryFont);
 }
 
-#DetalleMenu {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
 
 #DetalleMenu h1, h2 {
     text-align: center;
@@ -94,20 +138,6 @@ h1, h2, h3 {
     color: var(--ButtonHover);
 }
 
-.Comida {
-    margin-top: 40px;
-    margin-bottom: 40px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
-.Comida img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-}
-
 #DetalleMenu h3 {
     margin: 10px 0;
     color: var(--PrimaryFont);
@@ -121,6 +151,8 @@ h1, h2, h3 {
     color: var(--PrimaryFont);
     text-align: justify;
 }
+
+
 
 /* Media Queries para Responsividad */
 @media (max-width: 1200px) {
